@@ -1,3 +1,5 @@
+ :: from: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490909(v=technet.10)
+
 @echo off
 @setlocal EnableDelayedExpansion
 
