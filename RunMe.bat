@@ -81,3 +81,14 @@ if "%var1%"=="true" (
 :end
  :: pause
 goto:eof
+
+:emptyFolder
+  set FOLDER_TO_EMPTY=%~1
+  IF EXIST %FOLDER_TO_EMPTY% (
+    FOR /D %%p IN ("%FOLDER_TO_EMPTY%\*.*") DO (
+      rmdir "%%p" /S /Q
+    )
+    del %FOLDER_TO_EMPTY%\* /F /Q
+  )
+  goto:EOF
+
