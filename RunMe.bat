@@ -70,6 +70,10 @@ echo %THIS_DRIVE_LETTER%
 set WHAT_I_NEED=%THIS_DRIVE_LETTER%\:%THIS_FOLDER_NO_DRIVE_WITH_SLASHES%
 echo %WHAT_I_NEED%
 
+set THIS_WITH_SLASHES=
+call :backslasesToSlashes %THIS_FULL% THIS_WITH_SLASHES
+echo Converted in function call: %THIS_WITH_SLASHES%
+
 goto end
 
 set var1=true
@@ -92,3 +96,7 @@ goto:eof
   )
   goto:EOF
 
+:backslasesToSlashes
+  set _INPUT=%1 
+  set %2=%_INPUT:\=/%
+  goto:eof
