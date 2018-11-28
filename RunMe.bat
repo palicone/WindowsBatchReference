@@ -11,7 +11,7 @@ echo %%~0: %THIS_NO_QUOTES%
 set THIS_FULL=%~f0
 echo %%~f0: %THIS_FULL%
 
- :: Expand to a drive letter only
+ :: Expand to a drive letter (with ':') only
 set THIS_DRIVE=%~d0
 echo %%~d0: %THIS_DRIVE%
 
